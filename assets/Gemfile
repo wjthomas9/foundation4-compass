@@ -1,0 +1,17 @@
+source "http://rubygems.org"
+
+# Foundation Project
+gem 'zurb-foundation', '4.0.9'
+
+# Compiling
+gem 'compass'
+gem 'compass-growl'
+#gem 'terminal-notifier-guard'
+
+# Guard
+gem 'rb-fsevent', '~> 0.9' #satisfy guard listen dependency
+gem 'guard'
+gem 'guard-compass'
+gem 'guard-livereload'
+gem 'guard-process'
+gem 'juicer'

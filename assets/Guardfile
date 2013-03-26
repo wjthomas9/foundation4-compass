@@ -1,0 +1,19 @@
+# auto-compile with Compass and Sass
+# compass output path set in config.rb
+guard 'compass' do
+  watch('^compile/(.*).s[ac]ss')
+end
+
+#watch these folders/files and reload browser when they are saved
+#get the chrome plugin for livereload in the chrome web store
+guard 'livereload' do
+  watch(%r{templates/.+\.html}) #reload ee templates on save
+  watch(%r{templates/.+\.php}) #reload html templates on save
+  watch(%r{css/.+\.css})
+  watch(%r{js/.+\.js})
+end
+
+#use juicer to merge files referenced in js and create a minified js file
+guard 'process', :name => 'minify-main-js', :command => 'juicer merge compile/js/main.js --force -o js/main.js -s' do
+  watch %r{compile/foundation/main\.js}
+end
