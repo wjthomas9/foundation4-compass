@@ -14,6 +14,10 @@ guard 'livereload' do
 end
 
 #use juicer to merge files referenced in js and create a minified js file
-guard 'process', :name => 'minify-main-js', :command => 'juicer merge compile/js/main.js --force -o js/main.js -s' do
-  watch %r{compile/foundation/main\.js}
+#juicer wiki https://github.com/cjohansen/juicer/wiki/Usage
+guard 'process', :name => 'Minify Main JS', :command => 'juicer merge compile/js/main.js -o js/main.js --force -i -s' do
+  watch(%r{compile/js/main\.js})
+end
+guard 'process', :name => 'Minify Foundation JS', :command => 'juicer merge compile/js/foundation.js -o js/foundation.js --force -i -s' do
+  watch(%r{compile/js/foundation\.js})
 end
