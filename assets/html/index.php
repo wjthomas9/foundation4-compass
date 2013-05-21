@@ -98,16 +98,17 @@
 		</div>
 	</div>
 
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? '/assets/js/vendor/zepto' : '/assets/js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-  
-  <script src="/assets/js/foundation/main.js"></script>
-  
-  <script>
-    $(document).foundation();
-  </script>
+	<script>
+		document.write('<script src=' +
+		('__proto__' in {} ? '/assets/js/vendor/zepto' : '/assets/js/vendor/jquery') +
+		'.js><\/script>')
+	</script>
+
+	<script src="/assets/js/foundation.js"></script>
+	<script src="/assets/js/main.js"></script>
+
+	<script>
+		$(document).foundation();
+	</script>
 </body>
 </html>
