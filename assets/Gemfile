@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 # Foundation Project
-gem 'zurb-foundation', '4.0.9'
+gem 'zurb-foundation', '~> 4.1' #use >=4.1 and <5
 
 # Compiling
 gem 'compass'
