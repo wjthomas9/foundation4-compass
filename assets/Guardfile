@@ -7,8 +7,8 @@ end
 #watch these folders/files and reload browser when they are saved
 #get the chrome plugin for livereload in the chrome web store
 guard 'livereload' do
-  watch(%r{templates/.+\.html}) #reload ee templates on save
-  watch(%r{templates/.+\.php}) #reload html templates on save
+  watch(%r{static/+\.(php|html)}) #watch html prototyping template folder
+  watch(%r{templates/+\.(php|html)}) #watch cms template folder
   watch(%r{css/.+\.css})
   watch(%r{js/.+\.js})
 end
