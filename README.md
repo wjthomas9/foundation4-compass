@@ -10,7 +10,7 @@ You will also need to install juicer and your choice of compressor. (YUI compres
 To use
 -------------------
 1. clone the repo
-2. cd to site/assets/
+2. cd to ```assets/```
 3. run ```bundle install``` to get the necessary gems
 4. run ```bundle exec guard``` to start the Guard processes
 
